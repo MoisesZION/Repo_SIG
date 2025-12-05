@@ -1,0 +1,59 @@
+iniciar-programa
+    {Funciones útiles}
+
+    define-nueva-instruccion derecha como
+    inicio
+        repetir 3 veces gira-izquierda;
+    fin;
+
+    define-nueva-instruccion pared como
+    inicio
+        mientras frente-libre hacer
+        inicio
+            avanza;
+        fin;
+    fin;
+
+    define-nueva-instruccion guia como
+    inicio
+        {Luego de tocar pared, se va por la izquierda}
+        mientras derecha-libre hacer
+        inicio
+            gira-izquierda;
+        fin;
+    fin;
+
+    define-nueva-instruccion salir como
+    inicio
+        mientras orientado-al-norte o no-orientado-al-norte hacer
+        inicio
+            si derecha-libre entonces
+            inicio
+                {Hueco a la derecha es la salida}
+                derecha;
+                avanza;
+                apagate;
+            fin
+            sino
+            inicio
+                si frente-libre entonces
+                inicio
+                    avanza;
+                fin
+                sino
+                inicio
+                    gira-izquierda;
+                fin;
+            fin;
+        fin;
+    fin;
+
+    inicia-ejecucion
+
+        pared;
+        guia;
+        salir;
+        apagate;
+
+    termina-ejecucion
+finalizar-programa
