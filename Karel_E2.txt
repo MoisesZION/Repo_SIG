@@ -1,0 +1,110 @@
+iniciar-programa
+
+define-nueva-instruccion gira-derecha como
+inicio
+    repetir 3 veces gira-izquierda;
+fin;
+
+define-nueva-instruccion media-vuelta como
+inicio
+    repetir 2 veces gira-izquierda;
+fin;
+
+define-nueva-instruccion ir-hasta-pared como
+inicio
+    mientras frente-libre hacer
+    inicio
+        avanza;
+    fin;
+fin;
+
+define-nueva-instruccion orienta-al-norte como
+inicio
+    mientras no-orientado-al-norte hacer
+    inicio
+        gira-izquierda;
+    fin;
+fin;
+
+define-nueva-instruccion orienta-al-sur como
+inicio
+    mientras no-orientado-al-sur hacer
+    inicio
+        gira-izquierda;
+    fin;
+fin;
+
+define-nueva-instruccion orienta-al-este como
+inicio
+    mientras no-orientado-al-este hacer
+    inicio
+        gira-izquierda;
+    fin;
+fin;
+
+define-nueva-instruccion orienta-al-oeste como
+inicio
+    mientras no-orientado-al-oeste hacer
+    inicio
+        gira-izquierda;
+    fin;
+fin;
+
+define-nueva-instruccion ir-a-esquina-superior-izquierda como
+inicio
+    orienta-al-norte;
+    ir-hasta-pared;
+    orienta-al-oeste;
+    ir-hasta-pared;
+    orienta-al-este;    
+fin;
+
+{Exploración de bowls}
+
+define-nueva-instruccion explorar-bowl como
+inicio
+   
+    mientras frente-libre hacer
+    inicio
+        avanza;
+    fin;
+    si junto-a-zumbador entonces
+    inicio
+        coge-zumbador;
+    fin;
+    media-vuelta;
+    mientras frente-libre hacer
+    inicio
+        avanza;
+    fin;
+    media-vuelta;  
+fin;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+inicia-ejecucion
+    ir-a-esquina-superior-izquierda;
+    buscar-zumbador-en-bowls;
+    ir-a-esquina-inferior-derecha;
+    deja-zumbador;
+    apagate;
+termina-ejecucion
+
+finalizar-programa
