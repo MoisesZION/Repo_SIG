@@ -1,0 +1,35 @@
+Algoritmo AdivinarNumero
+	
+	Definir incognita, intento, numeroUsuario Como Entero
+	
+	incognita <- Aleatorio(1,50)
+	intento <- 1
+	
+	Escribir "He pensado un número entre 1 y 50."
+	Escribir "Tienes 5 chances para adivinarlo."
+	
+	Repetir
+		Escribir "Intento ", intento, ": Ingrese un número:"
+		Leer numeroUsuario
+		
+		Si numeroUsuario = incognita Entonces
+			Escribir "¡Nice! Adivinaste el número."
+		SiNo
+			Si numeroUsuario < incognita Entonces
+				Escribir "El número incognito es MAYOR."
+			SiNo
+				Escribir "El número incognito es MENOR."
+			FinSi
+		FinSi
+		
+		intento <- intento + 1
+		
+	Hasta Que numeroUsuario = incognita O intento > 5
+	
+	Si numeroUsuario <> incognita Entonces
+		Escribir "Se acabaron los intentos. El número incognito era: ", incognita
+	FinSi
+	
+FinAlgoritmo
+
+

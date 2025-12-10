@@ -1,0 +1,16 @@
+Algoritmo asteriscos
+	Definir Lineas, lineaActual, contadorAsteriscos, cantidadAsteriscos Como Entero
+	
+	Escribir "Ingrese una cantidad de lineas:"
+	Leer Lineas
+	
+	cantidadAsteriscos <- 1
+	
+	Para lineaActual <- 1 Hasta Lineas Hacer
+		Para contadorAsteriscos <- 1 Hasta cantidadAsteriscos Hacer
+			Escribir Sin Saltar "*"
+		FinPara
+		Escribir ""
+		cantidadAsteriscos <- cantidadAsteriscos + 2
+	FinPara
+FinAlgoritmo
