@@ -1,0 +1,33 @@
+Algoritmo  MCD_
+    Definir num, mcd, a, b, r Como Entero
+	
+    Escribir "Ingrese un numero (negativo para terminar): "
+    Leer num
+	
+    Si num < 0 Entonces
+        Escribir "No se ingresaron numeros validos."
+    SiNo
+        mcd <- num
+        Escribir "Ingrese otro numero (negativo para terminar): "
+        Leer num
+		
+        Mientras num >= 0 Hacer
+            a <- mcd
+            b <- num
+			
+            Mientras b <> 0 Hacer
+                r <- a % b
+                a <- b
+                b <- r
+            FinMientras
+			
+            mcd <- a
+			
+            Escribir "Ingrese otro numero (negativo para terminar): "
+            Leer num
+        FinMientras
+		
+        Escribir "El MCD de los numeros ingresados es: ", mcd
+    FinSi
+FinAlgoritmo
+

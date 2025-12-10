@@ -1,0 +1,35 @@
+Algoritmo MCM_
+    Definir num, mcm, a, b, r Como Entero
+    
+    Escribir "Ingrese un número (negativo para terminar): "
+    Leer num
+    
+    Si num < 0 Entonces
+        Escribir "No se ingresaron números válidos."
+    SiNo
+        mcm <- num
+        Escribir "Ingrese otro número (negativo para terminar): "
+        Leer num
+        
+        Mientras num >= 0 Hacer
+            
+            a <- mcm
+            b <- num
+            
+            Mientras b <> 0 Hacer
+                r <- a % b
+                a <- b
+                b <- r
+            FinMientras
+            
+            mcm <- (mcm * num) / a
+            
+            Escribir "Ingrese otro número (negativo para terminar): "
+            Leer num
+            
+        FinMientras
+        
+        Escribir "El MCM de los números ingresados es: ", mcm
+    FinSi
+    
+FinAlgoritmo
