@@ -29,9 +29,11 @@ public class combinacionPermutacion {
 
     public static int factorial(int numero) {
         int resultado = 1;
-        for (int i = 1; i <= numero; i++) {
+
+        for (int i = 1; i <= numero; i = i + 1) {
             resultado = resultado * i;
         }
+
         return resultado;
     }
 }
